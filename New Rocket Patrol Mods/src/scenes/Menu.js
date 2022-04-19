@@ -11,7 +11,7 @@ class Menu extends Phaser.Scene {
 
     create() {
         let menuConfig = {
-            fontFamily: 'Courier',
+            fontFamily: 'Georgia',
             fontSize: '28px',
             backgroundColor: '#F3B141',
             color: '#843605',
@@ -23,7 +23,7 @@ class Menu extends Phaser.Scene {
             fixedWidth: 0
         }
         
-        this.add.text(game.config.width/2, game.config.height/2 - borderUISize - borderpadding, 'ROCKET PATROL', menuConfig).setOrigin(0.5);
+        this.add.text(game.config.width/2, game.config.height/2 - borderUISize - borderpadding, 'BANDIT BUSTER', menuConfig).setOrigin(0.5);
         this.add.text(game.config.width/2, game.config.height/2, 'Use ←→ arrows to move & (F) to fire', menuConfig).setOrigin(0.5);
         menuConfig.backgroundColor = '#00FF00';
         menuConfig.color = '#000';
@@ -52,4 +52,3 @@ class Menu extends Phaser.Scene {
     }
 }
 
-//Haha comment test
