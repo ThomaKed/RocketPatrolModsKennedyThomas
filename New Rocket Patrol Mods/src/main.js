@@ -17,3 +17,5 @@ let borderpadding = borderUISize / 3;
 //Point Break down - 105 Max points
 //Allow the player to control the Rocket after it's fired (5)
 //Display the time remaining (in seconds) on the screen (10)
+//Create a new spaceship type (w/ new artwork) that's smaller, moves faster, and is worth more points (20)
+//Add your own (copyright-free) background music to the Play scene (5)

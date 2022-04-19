@@ -7,25 +7,26 @@ class Menu extends Phaser.Scene {
         this.load.audio('sfx_select', './assets/blip_select12.wav');
         this.load.audio('sfx_explosion', './assets/explosion38.wav');
         this.load.audio('sfx_rocket', './assets/rocket_shot.wav');
+        this.load.audio('BGM', './assets/BGM.mp3');
     }
 
     create() {
         let menuConfig = {
             fontFamily: 'Georgia',
             fontSize: '28px',
-            backgroundColor: '#F3B141',
-            color: '#843605',
-            align: 'right',
+            backgroundColor: '#ab7137',
+            color: '#2b1d0e',
+            align: 'center',
             padding: {
-                top: 5,
-                bottom: 5,
+                top: 2,
+                bottom: 2,
             },
             fixedWidth: 0
         }
         
         this.add.text(game.config.width/2, game.config.height/2 - borderUISize - borderpadding, 'BANDIT BUSTER', menuConfig).setOrigin(0.5);
         this.add.text(game.config.width/2, game.config.height/2, 'Use ←→ arrows to move & (F) to fire', menuConfig).setOrigin(0.5);
-        menuConfig.backgroundColor = '#00FF00';
+        menuConfig.backgroundColor = '#FFC24B';
         menuConfig.color = '#000';
         this.add.text(game.config.width/2, game.config.height/2 + borderUISize + borderpadding, 'Press ← for Novice or → for Expert', menuConfig).setOrigin(0.5);
         keyLEFT = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT);
@@ -47,6 +48,7 @@ class Menu extends Phaser.Scene {
                 gameTimer: 45000
             }
             this.sound.play('sfx_select');
+            
             this.scene.start('playScene');
         }
     }
